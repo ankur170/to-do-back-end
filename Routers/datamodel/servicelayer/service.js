@@ -12,4 +12,12 @@ const getall=async()=>{
     return(p)
 }
 
-module.exports={insertdata,getall}
+const add_imp=async(h)=>{
+    const filter={_id:h}
+    const update={important:true}
+    console.log(filter,update)
+    const x=await connect.findOneAndUpdate(filter,update)
+    return(x)
+}
+
+module.exports={insertdata,getall,add_imp}

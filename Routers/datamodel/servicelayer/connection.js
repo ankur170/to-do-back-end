@@ -8,7 +8,9 @@ datavar2.once('open', function() {
   });
   const schem=new mongoose.Schema(
     {
-        "data": String,
+        
+        data: String,
+        important:Boolean
       }
   )
 

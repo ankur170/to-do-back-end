@@ -7,4 +7,11 @@ router.get('/data/:param',async(req,res)=>{
     res.send(p)
 })
 
+router.get('/imp/:par',async(req,res)=>{
+    console.log("chall gyaa")
+    let s=req.params.par
+    let u=await serviceprovider.add_imp(s)
+    res.send(u)
+})
+
 module.exports=router
